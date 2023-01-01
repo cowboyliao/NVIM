@@ -5,25 +5,26 @@ vim.g.maplocalleader = " "
 local opt = {noremap = true, silent = true }
 map("n","<leader><CR>",":so ~/.config/nvim/init.lua<CR>",opt)
 
+map("n",";",":",opt)
 
 map("n","j","e",opt)
 map("v","e","j",opt)
 map("n","e","j",opt)
 map("v","j","e",opt)
+
 map("i","tn","<Esc>",opt)
 map("v","tn","<Esc>",opt)
+map("n","tn",":w!<CR>",opt)
 map("i","<Leader>tn","<Esc>:wq!<CR>",opt)
 map("v","<Leader>tn","<Esc>:wq!<CR>",opt)
 map("n","<Leader>tn",":wq!<CR>",opt)
 map("n","<Leader>nt",":q!<CR>",opt)
-
 
 map("v","<leader>y","\"+y",opt)
 map("n","<leader>y","\"+y",opt)
 map("n","<leader>p","\"+p",opt)
 map("n","<leader>Y","gg\"+yG",opt)
 map("n","<leader>S","w !sudo tee % > dev/null",opt)
-
 
 map("v","E",":m '>+1<CR>gv=gv",opt)
 map("v","K",":m '<-2<CR>gv=gv",opt)
@@ -64,5 +65,8 @@ pluginKeys.nvimTreeList = {
   { key = "c", action = "copy" },
   { key = "p", action = "paste" },
   { key = "s", action = "system_open" },
+  { key = "e", action = "" },
 }
 return pluginKeys
+  -- nerdfont
+  --ﭰ

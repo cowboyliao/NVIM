@@ -36,7 +36,7 @@ vim.o.hlsearch = false
 -- 边输入边搜索
 vim.o.incsearch = true
 -- 命令行高为2，提供足够的显示空间
-vim.o.cmdheight = 2
+vim.o.cmdheight = 0
 -- 当文件被外部程序修改时，自动加载
 vim.o.autoread = true
 vim.bo.autoread = true
@@ -73,7 +73,7 @@ vim.o.wildmenu = true
 -- Dont' pass messages to |ins-completin menu|
 vim.o.shortmess = vim.o.shortmess .. 'c'
 -- 补全最多显示10行
-vim.o.pumheight = 10
+vim.o.pumheight = 5
 -- 永远显示 tabline
 vim.o.showtabline = 2
 -- 使用增强状态栏插件后不再需要 vim 的模式提示
