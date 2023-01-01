@@ -10,11 +10,19 @@ map("n","j","e",opt)
 map("v","e","j",opt)
 map("n","e","j",opt)
 map("v","j","e",opt)
+map("i","tn","<Esc>",opt)
+map("v","tn","<Esc>",opt)
+map("i","<Leader>tn","<Esc>:wq!<CR>",opt)
+map("v","<Leader>tn","<Esc>:wq!<CR>",opt)
+map("n","<Leader>tn",":wq!<CR>",opt)
+map("n","<Leader>nt",":q!<CR>",opt)
 
 
 map("v","<leader>y","\"+y",opt)
 map("n","<leader>y","\"+y",opt)
+map("n","<leader>p","\"+p",opt)
 map("n","<leader>Y","gg\"+yG",opt)
+map("n","<leader>S","w !sudo tee % > dev/null",opt)
 
 
 map("v","E",":m '>+1<CR>gv=gv",opt)
