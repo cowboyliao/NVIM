@@ -6,11 +6,11 @@ vim.o.scrolloff = 28
 vim.o.sidescrolloff = 8
 -- 使用相对行号
 vim.wo.number = true
---vim.wo.relativenumber = true
+ vim.wo.relativenumber = true
 -- 高亮所在行
-vim.wo.cursorline = true
+ vim.wo.cursorline = true
 -- 显示左侧图标指示列
-vim.wo.signcolumn = "yes"
+-- vim.wo.signcolumn = "yes"
 -- 右侧参考线，超过表示代码太长了，考虑换行
 vim.wo.colorcolumn = "80"
 -- 缩进2个空格等于一个Tab
@@ -35,13 +35,13 @@ vim.o.smartcase = true
 vim.o.hlsearch = false
 -- 边输入边搜索
 vim.o.incsearch = true
--- 命令行高为2，提供足够的显示空间
-vim.o.cmdheight = 0
+-- 命令行高为1，提供足够的显示空间
+vim.o.cmdheight = 1
 -- 当文件被外部程序修改时，自动加载
 vim.o.autoread = true
 vim.bo.autoread = true
 -- 禁止折行
-vim.wo.wrap = false
+vim.wo.wrap = true
 -- 光标在行首尾时<Left><Right>可以跳到下一行
 vim.o.whichwrap = '<,>,[,]'
 -- 允许隐藏被修改过的buffer
@@ -54,8 +54,8 @@ vim.o.writebackup = false
 vim.o.swapfile = false
 -- smaller updatetime
 vim.o.updatetime = 300
--- 设置 timeoutlen 为等待键盘快捷键连击时间500毫秒，可根据需要设置
-vim.o.timeoutlen = 500
+-- 设置 timeoutlen 为等待键盘快捷键连击时间250毫秒，可根据需要设置
+vim.o.timeoutlen = 250
 -- split window 从下边和右边出现
 vim.o.splitbelow = true
 vim.o.splitright = true
@@ -63,8 +63,8 @@ vim.o.splitright = true
 vim.g.completeopt = "menu,menuone,noselect,noinsert"
 -- 样式
 vim.o.background = "light"
-vim.o.termguicolors = true
-vim.opt.termguicolors = true
+ vim.o.termguicolors = true
+ vim.opt.termguicolors = true
 -- 不可见字符的显示，这里只把空格显示为一个点
 vim.o.list = true
 vim.o.listchars = "space:·"
@@ -72,10 +72,10 @@ vim.o.listchars = "space:·"
 vim.o.wildmenu = true
 -- Dont' pass messages to |ins-completin menu|
 vim.o.shortmess = vim.o.shortmess .. 'c'
--- 补全最多显示10行
+-- 补全最多显示5行
 vim.o.pumheight = 5
 -- 永远显示 tabline
-vim.o.showtabline = 2
+ vim.o.showtabline = 2
 -- 使用增强状态栏插件后不再需要 vim 的模式提示
 vim.o.showmode = false
 vim.opt.clipboard="unnamedplus"

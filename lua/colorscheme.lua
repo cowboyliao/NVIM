@@ -1,14 +1,11 @@
 local colorscheme = "tokyonight"
 require("tokyonight").setup({
-  transparent = true,
+  transparent =true,
   styles = {
     sidebars = "untransparent",
     floats = "untransparent"
   },
   on_highlights = function(hl, colors)
-    hl.Cursor = {
-      fg= colors.red
-    }
     hl.LineNr = {
       fg = colors.red
     }
