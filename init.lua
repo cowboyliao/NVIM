@@ -22,6 +22,3 @@ require("format.setup")
 require("dap.setup")
 
 -- require("dap.vimspector")
--- utils
--- 复制到windows剪贴板
--- require('utils.fix-yank')

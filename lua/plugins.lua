@@ -277,7 +277,10 @@ packer.startup({
 
     -- nightfox
     -- use("EdenEast/nightfox.nvim")
-
+    use {
+      'glacambre/firenvim',
+      run = function() vim.fn['firenvim#install'](0) end 
+    }
     -------------------------------------------------------
     -- git
     use({

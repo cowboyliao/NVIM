@@ -19,8 +19,8 @@ local opt = {
 --------------------------------------------------------------------------
 
 -- leader key 为空
-vim.g.mapleader = keys.leader_key
-vim.g.maplocalleader = keys.leader_key
+vim.g.mapleader =" " 
+vim.g.maplocalleader =" "
 
 local opts_remap = {
   remap = true,
@@ -31,8 +31,30 @@ local opts_expr = {
   expr = true,
   silent = true,
 }
+keymap("n","<leader><CR>",":so ~/.config/nvim/init.lua<CR>",opt)
+keymap("n",";",":",opt)
+keymap("n","j","e",opt)
+keymap("v","e","j",opt)
+keymap("n","e","j",opt)
+keymap("v","j","e",opt)
 
--- 命令行下 Ctrl+j/k  上一个下一个
+keymap("i","tn","<Esc>",opt)
+keymap("v","tn","<Esc>",opt)
+keymap("n","tn",":w!<CR>",opt)
+keymap("i","<Leader>tn","<Esc>:wq!<CR>",opt)
+keymap("v","<Leader>tn","<Esc>:wq!<CR>",opt)
+keymap("n","<Leader>tn",":wq!<CR>",opt)
+keymap("n","<Leader>nt",":q!<CR>",opt)
+
+keymap("v","<leader>y","\"+y",opt)
+keymap("n","<leader>y","\"+y",opt)
+keymap("n","<leader>p","\"+p",opt)
+keymap("n","<leader>Y","gg\"+yG",opt)
+keymap("n","<leader>S","w !sudo tee % > dev/null",opt)
+
+keymap("v","E",":m '>+1<CR>gv=gv",opt)
+keymap("v","K",":m '<-2<CR>gv=gv",opt)
+-- 命令行下 Ctrl+n/p  上一个下一个
 keymap("c", keys.c_next_item, "<C-n>", opts_remap)
 keymap("c", keys.c_prev_item, "<C-p>", opts_remap)
 
