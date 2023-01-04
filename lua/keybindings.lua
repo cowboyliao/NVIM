@@ -52,8 +52,6 @@ keymap("n","<leader>p","\"+p",opt)
 keymap("n","<leader>Y","gg\"+yG",opt)
 keymap("n","<leader>S","w !sudo tee % > dev/null",opt)
 
-keymap("v","E",":m '>+1<CR>gv=gv",opt)
-keymap("v","K",":m '<-2<CR>gv=gv",opt)
 -- 命令行下 Ctrl+n/p  上一个下一个
 keymap("c", keys.c_next_item, "<C-n>", opts_remap)
 keymap("c", keys.c_prev_item, "<C-p>", opts_remap)
@@ -101,8 +99,8 @@ keymap("v", "<", "<gv")
 keymap("v", ">", ">gv")
 
 -- 上下移动选中文本
-keymap("x", "J", ":move '>+1<CR>gv-gv")
 keymap("x", "K", ":move '<-2<CR>gv-gv")
+keymap("x", "E", ":move '>+1<CR>gv-gv")
 
 -- 在visual mode 里粘贴不要复制
 keymap("x", "p", '"_dP')
