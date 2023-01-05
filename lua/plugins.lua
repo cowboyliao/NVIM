@@ -22,6 +22,23 @@ function(use)
     'glacambre/firenvim',
     run = function() vim.fn['firenvim#install'](0) end 
   }
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+  -- or                            , branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  -- telescope extensions
+  use "LinArcX/telescope-env.nvim"
+  -- treesitter （新增）
+  use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+  -- use({ "nvim-treesitter/nvim-treesitter"})
+  --------------------- LSP --------------------
+  use({ "williamboman/mason.nvim" })
+  use({ "williamboman/mason-lspconfig.nvim" })
+  -- Lspconfig
+  use({ "neovim/nvim-lspconfig" })
+  -- dashboard-nvim (新增)
+  use("glepnir/dashboard-nvim")
 end)
 -- 每次保存 plugins.lua 自动安装插件
 pcall(

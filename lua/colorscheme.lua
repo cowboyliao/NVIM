@@ -1,6 +1,6 @@
 local colorscheme = "tokyonight"
 require("tokyonight").setup({
-  transparent =true,
+  transparent =false,
   styles = {
     sidebars = "untransparent",
     floats = "untransparent"
