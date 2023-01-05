@@ -2,7 +2,7 @@
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = 'utf-8'
 -- jkhl 移动时光标周围保留8行
-vim.o.scrolloff = 28
+vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
 -- 使用相对行号
 vim.wo.number = true
@@ -32,7 +32,7 @@ vim.o.smartindent = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 -- 搜索不要高亮
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 -- 边输入边搜索
 vim.o.incsearch = true
 -- 命令行高为1，提供足够的显示空间

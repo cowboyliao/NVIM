@@ -15,24 +15,20 @@ db.custom_footer = {
 db.custom_center = {
   {
     icon = "  ",
-    desc = "Projects                            ",
-    action = "Telescope projects",
+    desc = "Poems                ",
+    action = "Telescope man_pages",
   },
   {
     icon = "  ",
-    desc = "Recently files                      ",
-    action = "Telescope oldfiles",
+    desc = "Note of the year 2023",
+    action="edit ~/Note/2023.md",
   },
   {
     icon = "  ",
-    desc = "Edit keybindings                    ",
+    desc = "haha",
     action = "edit ~/.config/nvim/lua/keybindings.lua",
   },
-  {
-    icon = "  ",
-    desc = "Edit Projects                       ",
-    action = "edit ~/.local/share/nvim/project_nvim/project_history",
-  },
+   --icon = "  ",
   -- {
   --   icon = "  ",
   --   desc = "Edit .bashrc                        ",

@@ -3,14 +3,10 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 -- 复用 opt 参数
 local opt = {noremap = true, silent = true }
-map("n","<leader><CR>",":so ~/.config/nvim/init.lua<CR>",opt)
+map("n","<leader><CR>",":nohlsearch<CR>",opt)
 
-map("n",";",":",opt)
-
-map("n","j","e",opt)
-map("v","e","j",opt)
-map("n","e","j",opt)
-map("v","j","e",opt)
+map("",";",":",opt)
+map("n","<leader>o","za",opt)
 
 map("i","tn","<Esc>",opt)
 map("v","tn","<Esc>",opt)
@@ -31,11 +27,11 @@ map("v","K",":m '<-2<CR>gv=gv",opt)
 
 -- bufferline
 -- 左右Tab切换
-map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<C-n>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<C-i>", ":BufferLineCycleNext<CR>", opt)
 -- 关闭
 --"moll/vim-bbye"
-map("n", "<C-w>", ":Bdelete!<CR>", opt)
+map("n", "<leader>x", ":Bdelete!<CR>", opt)
 map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
 map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
