@@ -25,8 +25,8 @@ db.custom_center = {
   },
   {
     icon = "  ",
-    desc = "haha",
-    action = "edit ~/.config/nvim/lua/keybindings.lua",
+    desc = "Projects",
+    action="edit ~/CSAPP-RUST/README.md",
   },
    --icon = "  ",
   -- {

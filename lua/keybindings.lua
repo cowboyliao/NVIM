@@ -8,13 +8,14 @@ map("n","<leader><CR>",":nohlsearch<CR>",opt)
 map("",";",":",opt)
 map("n","<leader>o","za",opt)
 
-map("i","tn","<Esc>",opt)
-map("v","tn","<Esc>",opt)
-map("n","tn",":w!<CR>",opt)
-map("i","<Leader>tn","<Esc>:wq!<CR>",opt)
-map("v","<Leader>tn","<Esc>:wq!<CR>",opt)
-map("n","<Leader>tn",":wq!<CR>",opt)
-map("n","<Leader>nt",":q!<CR>",opt)
+-- map("i","tn","<Esc>",opt)
+-- map("v","tn","<Esc>",opt)
+-- map("n","tn",":w!<CR>",opt)
+-- map("i","<Leader>tn","<Esc>:wq!<CR>",opt)
+-- map("v","<Leader>tn","<Esc>:wq!<CR>",opt)
+map("n","<Leader>tn",":w!<CR>",opt)
+map("n","<Leader>se",":q!<CR>",opt)
+
 
 map("v","<leader>y","\"+y",opt)
 map("n","<leader>y","\"+y",opt)
@@ -23,7 +24,7 @@ map("n","<leader>Y","gg\"+yG",opt)
 map("n","<leader>S","w !sudo tee % > dev/null",opt)
 
 map("v","E",":m '>+1<CR>gv=gv",opt)
-map("v","K",":m '<-2<CR>gv=gv",opt)
+map("v","U",":m '<-2<CR>gv=gv",opt)
 
 -- bufferline
 -- 左右Tab切换
