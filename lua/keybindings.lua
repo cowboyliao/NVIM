@@ -5,7 +5,6 @@ vim.g.maplocalleader = " "
 local opt = {noremap = true, silent = true }
 map("n","<leader><CR>",":nohlsearch<CR>",opt)
 
-map("",";",":",opt)
 map("n","<leader>o","za",opt)
 
 -- map("i","tn","<Esc>",opt)
@@ -28,14 +27,14 @@ map("v","U",":m '<-2<CR>gv=gv",opt)
 
 -- bufferline
 -- 左右Tab切换
-map("n", "<C-n>", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<C-i>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<a-n>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<a-i>", ":BufferLineCycleNext<CR>", opt)
 -- 关闭
 --"moll/vim-bbye"
 map("n", "<leader>x", ":Bdelete!<CR>", opt)
-map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
-map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
-map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
+map("n", "<leader>bi", ":BufferLineCloseRight<CR>", opt)
+map("n", "<leader>bn", ":BufferLineCloseLeft<CR>", opt)
+map("n", "<leader>be", ":BufferLinePickClose<CR>", opt)
 
 
 -- Telescope
@@ -85,11 +84,14 @@ pluginKeys.telescopeList = {
     -- 关闭窗口
     ["<C-c>"] = "close",
     -- 预览窗口上下滚动
-    ["<C-u>"] = "preview_scrolling_up",
-    ["<C-d>"] = "preview_scrolling_down",
   },
   n={
+    ["E"] = "preview_scrolling_down",
+    ["U"] = "preview_scrolling_up",
     ["e"] = "move_selection_next",
+    ["u"] = "move_selection_previous",
+    ["u"] = "move_selection_previous",
+    ["x"] = "close",
   }
 }
 -- lsp 回调函数快捷键设置
@@ -119,4 +121,4 @@ pluginKeys.mapLSP = function(mapbuf)
 end
 return pluginKeys
   -- nerdfont
-  --ﭰ
+  --ﭰ

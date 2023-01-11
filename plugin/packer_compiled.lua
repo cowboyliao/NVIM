@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/leeao/.local/share/nvim/site/pack/packer/start/firenvim",
     url = "https://github.com/glacambre/firenvim"
   },
+  ["leap.nvim"] = {
+    loaded = true,
+    path = "/home/leeao/.local/share/nvim/site/pack/packer/start/leap.nvim",
+    url = "https://github.com/ggandor/leap.nvim"
+  },
   ["lualine-lsp-progress"] = {
     loaded = true,
     path = "/home/leeao/.local/share/nvim/site/pack/packer/start/lualine-lsp-progress",

@@ -39,6 +39,7 @@ function(use)
   use({ "neovim/nvim-lspconfig" })
   -- dashboard-nvim (新增)
   use("glepnir/dashboard-nvim")
+  use("ggandor/leap.nvim")
 end)
 -- 每次保存 plugins.lua 自动安装插件
 pcall(
