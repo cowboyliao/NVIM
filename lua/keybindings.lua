@@ -4,8 +4,14 @@ vim.g.maplocalleader = " "
 -- 复用 opt 参数
 local opt = {noremap = true, silent = true }
 map("n","<leader><CR>",":nohlsearch<CR>",opt)
+map("n",";",":",opt)
+map("n","<c-f>",":silent !tmux neww tmux-sessionizer<CR>",opt)
+map("n","<c-q>",":silent !tmux neww cht<CR>",opt)
+map("n",":",";",opt)
 
 map("n","<leader>o","za",opt)
+map("n","<leader>s",":!source %<CR>",opt)
+map("n","<leader>e",":!chmod +x %<CR>",opt)
 
 -- map("i","tn","<Esc>",opt)
 -- map("v","tn","<Esc>",opt)

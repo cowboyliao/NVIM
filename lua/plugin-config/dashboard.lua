@@ -25,7 +25,7 @@ db.custom_center = {
   },
   {
     icon = "  ",
-    desc = "Projects",
+    desc = "Projects             ",
     action="edit ~/CSAPP-RUST/README.md",
   },
    --icon = "  ",

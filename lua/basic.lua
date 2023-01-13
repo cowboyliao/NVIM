@@ -5,8 +5,8 @@ vim.o.fileencoding = 'utf-8'
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
 -- 使用相对行号
--- vim.wo.number = true
--- vim.wo.relativenumber = true
+vim.wo.number = true
+ vim.wo.relativenumber = true
 -- 高亮所在行
  vim.wo.cursorline = true
 -- 显示左侧图标指示列
@@ -40,8 +40,8 @@ vim.o.cmdheight = 1
 -- 当文件被外部程序修改时，自动加载
 vim.o.autoread = true
 vim.bo.autoread = true
--- allow折行
-vim.wo.wrap = true
+-- 不允许折行
+vim.wo.wrap = false
 -- 光标在行首尾时<Left><Right>可以跳到下一行
 vim.o.whichwrap = '<,>,[,]'
 -- 允许隐藏被修改过的buffer
@@ -75,7 +75,7 @@ vim.o.shortmess = vim.o.shortmess .. 'c'
 -- 补全最多显示5行
 vim.o.pumheight = 5
 -- 永远显示 tabline
- vim.o.showtabline = 2
+vim.o.showtabline = 2
 -- 使用增强状态栏插件后不再需要 vim 的模式提示
 vim.o.showmode = false
 vim.opt.clipboard="unnamedplus"

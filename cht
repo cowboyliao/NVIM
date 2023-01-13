@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+branch=$(echo "golang c cpp rust lua git cmake makefile python matlab tmux neovim zsh linux find sed awk grep gdb gcc assembly"|tr " " "\n")
+selected=$(echo -e "$branch"|fzf)
+print -n "GIME YOUR QUERY: " 
+read query
+tmux split-window -p 50 -h zsh -c "cht.sh $selected $(echo "$query" |tr " " "+")| less"
