@@ -19,7 +19,7 @@ function(use)
     config = function() require("nvim-autopairs").setup {} end
   }
   use {
-    'glacambre/firenvim',
+   'glacambre/firenvim',
     run = function() vim.fn['firenvim#install'](0) end 
   }
   use {
@@ -40,6 +40,7 @@ function(use)
   -- dashboard-nvim (新增)
   use("glepnir/dashboard-nvim")
   use("ggandor/leap.nvim")
+  use 'wakatime/vim-wakatime'
 end)
 -- 每次保存 plugins.lua 自动安装插件
 pcall(
